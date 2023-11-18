@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../alx-higher_level_programming"
+		},
+		{
+			"path": "../alx-low_level_programming"
+		},
+		{
+			"path": "../alx-system_engineering-devops"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Learning_JavaScript"
+	}
+}

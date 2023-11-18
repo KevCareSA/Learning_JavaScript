@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even and Odd Numbers</title>
+
+    <style type="text/css">
+      /*
+
+        #container {
+            text-align: center;
+        }
+        
+        #container .box1{
+            background-color: lightgray;
+            width: 20%;
+            padding: 10px;
+        }
+
+        #container .box2{
+            background-color: grey;
+            width: 20%;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        } 
+
+        #container .box3{
+            background-color: grey;
+            width: 20%;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        } */
+        #container .box1, #container .box2, #container .box3 {
+            background-color: lightgray;
+            width: calc(30% - 20px); /* 30% total width minus margins and padding */
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+          }
+          
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div class="box1">
+            <label for="txtNum">Number :</label><br/>
+            <input type="text" id="txtNum" value="0" /><br/><br/>
+            
+            <input type="button" value="Test" onclick="test()"/>
+            <input type="button" value="reset" onclick="reset()"/><br/><br/>
+
+            <span id="spnResult">Enter an integer number </span>
+        </div>
+        <div class="box2">
+            <label>Enter an integer between 1 and 10</label>
+            <input type="text" id="textbox2" value="0" /><br/><br/>
+
+            <input type="button" value="play" onclick="play()"/>
+            <input type="button" value="reset" onclick="reset()"/><br/><br/>
+
+            <span id="spnResult2">Enter an integer number </span>
+
+        </div>
+        
+        
+    </div>
+
+    <script type="text/javascript">
+        function reset()
+        {
+           document.getElementById("txtNum").value ="0";
+           document.getElementById("spnResult").innerHTML = "Enter an integer number";
+
+        }
+
+        function test()
+        {
+            var num = Number(document.getElementById("txtNum").value);
+            if (num %2 == 0)
+            {
+                document.getElementById("spnResult").innerHTML = num + " " + "is even number";
+            } 
+            else
+            {
+                document.getElementById("spnResult").innerHTML = num + " " +"is odd number";
+            }
+            
+        }
+
+        function play()
+        {
+            var uNum = parseInt(document.getElementById("textbox2").value);
+            var rNum = parseInt((Math.random() * 10) + 1); // 1 to 10
+            if(uNum == rNum)
+            {
+                document.getElementById("spnResult2").innerHTML = "Congrats! You won.";
+            }
+            else
+            {
+                document.getElementById("spnResult2").innerHTML = "You Lost! The number is "+ rNum;
+            }
+                
+        }
+    </script>
+</body>
+</html>
