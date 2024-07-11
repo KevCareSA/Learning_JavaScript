@@ -1,1 +1,1 @@
-# Learning JavaScript Wtih Projects
+# Learning JavaScript With Projects
